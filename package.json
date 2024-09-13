@@ -1,0 +1,22 @@
+{
+  "name": "omnifood-website",
+  "version": "1.0.0",
+  "description": "A landing page for omnifood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Idowu-Adelekee/Idowu-omnifood-demo.git"
+  },
+  "keywords": [
+    "3880"
+  ],
+  "author": "Idowu Adeleke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Idowu-Adelekee/Idowu-omnifood-demo/issues"
+  },
+  "homepage": "https://github.com/Idowu-Adelekee/Idowu-omnifood-demo#readme"
+}
