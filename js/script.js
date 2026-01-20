@@ -127,3 +127,46 @@ yearEl.textContent = currentYear;
 // */
 
 // Creating date
+// const now = new Date();
+// console.log(now);
+
+// // Parsing a string
+// console.log(new Date("Jan 21 2026 10:12:19"));
+// console.log(new Date("24 December 2028"));
+
+// console.log(new Date("Jan 1 1998"));
+
+// // Parsing number
+// console.log(new Date(2037, 10, 19, 6, 23, 5));
+// console.log(new Date(2037, 10, 33, 6, 23, 5));
+
+// // The Unix time is the number of the miliseconds passed since January first 1970
+
+// console.log(new Date(0));
+// console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+// const day3TimeStamp = 3 * 24 * 60 * 60 * 1000;
+
+// console.log(new Date(day3TimeStamp));
+
+// Working with dates
+const future = new Date();
+console.log(future);
+
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+console.log(future.getHours());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+
+const todayStamp = new Date(future.getTime());
+console.log(todayStamp);
+
+console.log(Date.now());
+
+future.setFullYear(2040);
+console.log(future);
