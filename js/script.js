@@ -1,10 +1,10 @@
 // NEW CODE
 // Selecting Elements
 const btnOpenEl = document.querySelector(
-  '.icon-mobile-nav[name="menu-outline"]'
+  '.icon-mobile-nav[name="menu-outline"]',
 );
 const btnCloseEl = document.querySelector(
-  '.icon-mobile-nav[name="close-outline"]'
+  '.icon-mobile-nav[name="close-outline"]',
 );
 const headerEl = document.querySelector(".header");
 const heroEl = document.querySelector(".section-hero");
@@ -33,7 +33,7 @@ const observer = new IntersectionObserver(
     root: null,
     threshold: 0,
     rootMargin: "-80px",
-  }
+  },
 );
 observer.observe(heroEl);
 
@@ -125,3 +125,5 @@ yearEl.textContent = currentYear;
 //   }
 // }
 // */
+
+// Creating date
