@@ -166,7 +166,7 @@ console.log(future.getTime());
 const todayStamp = new Date(future.getTime());
 console.log(todayStamp);
 
-console.log(Date.now());
+// console.log(Date.now());
 
 // future.setFullYear(2040);
 // console.log(future);
