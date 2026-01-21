@@ -62,7 +62,8 @@ const sectionCallBack = function (entries, observer) {
   if (entry.isIntersecting) {
     entry.target.classList.remove("section--hidden");
   } else {
-    // entry.target.classList.add("section--hidden");
+    entry.target.classList.add("section--hidden");
+    reviewOnScroll.unobserve(entry.target);
   }
 };
 
@@ -120,3 +121,44 @@ allSectionContainer.forEach((allS) => {
 
 // future.setFullYear(2040);
 // console.log(future);
+
+// Creating a Date
+// const present = new Date();
+// console.log(present);
+// const future = new Date("July 31 2026");
+// console.log(future);
+
+// console.log(new Date("December 24, 2020"));
+// console.log(present.toISOString());
+// console.log(new Date(21, 11, 2026));
+// console.log(new Date(2026, 0, 21, 14, 9, 30));
+
+// // Get methods
+// console.log(present.getFullYear());
+// console.log(new Date().getMonth());
+// console.log(present.getDate());
+// console.log(present.getDay());
+// console.log(present.getHours());
+// console.log(new Date().getMinutes());
+// console.log(new Date().getMilliseconds());
+
+// // Set methods
+// console.log(present.setFullYear(2028));
+// console.log(present.getFullYear());
+
+// // Time Stamps
+// console.log(new Date(0));
+// console.log(new Date(3 * 24 * 60 * 60 * 1000));
+// console.log(new Date(259200000));
+
+// console.log(future.getTime());
+// console.log(new Date(new Date().getTime()));
+
+// console.log(Date.now());
+
+// // Now time stamp
+// // console.log(new Date(878454));
+// // This is how we get the current time stamp
+// console.log(new Date().getTime());
+// // or
+// console.log(Date.now());
