@@ -161,7 +161,7 @@ console.log(future.getHours());
 console.log(future.getMinutes());
 console.log(future.getSeconds());
 console.log(future.toISOString());
-console.log(future.getTime());
+// console.log(future.getTime());
 
 // const todayStamp = new Date(future.getTime());
 // console.log(todayStamp);
