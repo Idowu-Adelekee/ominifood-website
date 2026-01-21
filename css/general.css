@@ -44,6 +44,15 @@ body {
   margin: 0 auto;
 }
 
+.section {
+  transition: all 0.4s ease-out;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
 .grid {
   display: grid;
   row-gap: 9.6rem;

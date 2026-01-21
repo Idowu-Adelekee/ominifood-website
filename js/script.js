@@ -52,79 +52,29 @@ btnCloseEl.addEventListener("click", function () {
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
-// FROM STARTER FILE
-///////////////////////////////////////////////////////////
-// // Fixing flexbox gap property missing in some Safari versions
-// function checkFlexGap() {
-//   var flex = document.createElement("div");
-//   flex.style.display = "flex";
-//   flex.style.flexDirection = "column";
-//   flex.style.rowGap = "1px";
 
-//   flex.appendChild(document.createElement("div"));
-//   flex.appendChild(document.createElement("div"));
+// Implementing review on scrol
+const allSectionContainer = document.querySelectorAll(".section");
 
-//   document.body.appendChild(flex);
-//   var isSupported = flex.scrollHeight === 1;
-//   flex.parentNode.removeChild(flex);
-//   console.log(isSupported);
+const sectionCallBack = function (entries, observer) {
+  const [entry] = entries;
 
-//   if (!isSupported) document.body.classList.add("no-flexbox-gap");
-// }
-// checkFlexGap();
+  if (entry.isIntersecting) {
+    entry.target.classList.remove("section--hidden");
+  } else {
+    // entry.target.classList.add("section--hidden");
+  }
+};
 
-// // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+const reviewOnScroll = new IntersectionObserver(sectionCallBack, {
+  root: null,
+  threshold: 0.2,
+});
 
-// /*
-// .no-flexbox-gap .main-nav-list li:not(:last-child) {
-//   margin-right: 4.8rem;
-// }
-
-// .no-flexbox-gap .list-item:not(:last-child) {
-//   margin-bottom: 1.6rem;
-// }
-
-// .no-flexbox-gap .list-icon:not(:last-child) {
-//   margin-right: 1.6rem;
-// }
-
-// .no-flexbox-gap .delivered-faces {
-//   margin-right: 1.6rem;
-// }
-
-// .no-flexbox-gap .meal-attribute:not(:last-child) {
-//   margin-bottom: 2rem;
-// }
-
-// .no-flexbox-gap .meal-icon {
-//   margin-right: 1.6rem;
-// }
-
-// .no-flexbox-gap .footer-row div:not(:last-child) {
-//   margin-right: 6.4rem;
-// }
-
-// .no-flexbox-gap .social-links li:not(:last-child) {
-//   margin-right: 2.4rem;
-// }
-
-// .no-flexbox-gap .footer-nav li:not(:last-child) {
-//   margin-bottom: 2.4rem;
-// }
-
-// @media (max-width: 75em) {
-//   .no-flexbox-gap .main-nav-list li:not(:last-child) {
-//     margin-right: 3.2rem;
-//   }
-// }
-
-// @media (max-width: 59em) {
-//   .no-flexbox-gap .main-nav-list li:not(:last-child) {
-//     margin-right: 0;
-//     margin-bottom: 4.8rem;
-//   }
-// }
-// */
+allSectionContainer.forEach((allS) => {
+  allS.classList.add("section--hidden");
+  reviewOnScroll.observe(allS);
+});
 
 // Creating date
 // const now = new Date();
@@ -150,14 +100,14 @@ yearEl.textContent = currentYear;
 // console.log(new Date(day3TimeStamp));
 
 // Working with dates
-const future = new Date();
-console.log(future);
+// const future = new Date();
+// console.log(future);
 
-console.log(future.getFullYear());
-console.log(future.getMonth());
-console.log(future.getDate());
-console.log(future.getDay());
-console.log(future.getHours());
+// console.log(future.getFullYear());
+// console.log(future.getMonth());
+// console.log(future.getDate());
+// console.log(future.getDay());
+// console.log(future.getHours());
 // console.log(future.getMinutes());
 // console.log(future.getSeconds());
 // console.log(future.toISOString());
